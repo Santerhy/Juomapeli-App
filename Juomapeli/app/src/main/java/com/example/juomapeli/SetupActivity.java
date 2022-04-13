@@ -19,18 +19,22 @@ public class SetupActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setup);
 
-        inputfield  = (EditText) findViewById(R.id.editTextTextPersonName);
+        inputfield = (EditText) findViewById(R.id.editTextTextPersonName);
         inputfield.setOnKeyListener(new View.OnKeyListener() {
             public boolean onKey(View v, int keyCode, KeyEvent event) {
                 // If the event is a key-down event on the "enter" button
                 if ((event.getAction() == KeyEvent.ACTION_DOWN) &&
                         (keyCode == KeyEvent.KEYCODE_ENTER)) {
                     // Perform action on key press
-                    
+                    getName(inputfield.getText().toString());
                     return true;
                 }
                 return false;
             }
         });
     }
+        public void getName(String name) {
+            System.out.println(name);
+        }
+
 }
