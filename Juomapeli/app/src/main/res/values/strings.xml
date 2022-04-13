@@ -9,4 +9,9 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="app_title">Santerin Juomapeli</string>
+    <string name="title_button">Aloita</string>
+    <string name="setup_title">Lisää pelaajien nimet</string>
+    <string name="inputtext_default">Kirjoita nimi</string>
+    <string name="buttonDeleteLatest">Poista viimeisin nimi</string>
 </resources>
