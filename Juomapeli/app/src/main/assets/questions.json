@@ -162,7 +162,7 @@
             "targetPlayer": "false"
         }, {
             "title": "Smurffaa mua",
-            "description": " Kaikki korvaavat satunnaisia sanoja puheessaan 'smurffi'-puheella yhden kierroksen ajan.",
+            "description": " Korvaa puheessasi sanoja 'smurffi'-puheella yhden kierroksen ajan.",
             "timedEvent": "true",
             "targetPlayer": "false"
         }

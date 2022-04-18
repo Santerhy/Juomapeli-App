@@ -16,7 +16,6 @@ public class PlayerData {
     private PlayerData(){}
     ArrayList<String> players;
     ArrayList<Question> questions;
-    ArrayList<Integer> usedIndexes = new ArrayList<Integer>();
     int maxRound;
     public static synchronized PlayerData getInstance() {
         if (INSTANCE == null) {
@@ -32,8 +31,8 @@ public class PlayerData {
         Log.d("loggaus", "lista luotu");
         Collections.shuffle(questions); //(questions, new Random(players.size())
         Log.d("loggaus", "lista sekoitettu");
-        //while (maxRound < questions.size())
-          //  questions.remove(questions.size() - 1);
+        while (maxRound < questions.size())
+            questions.remove(questions.size() - 1);
         Log.d("loggaus", "koko " + questions.size());
     }
 
@@ -55,4 +54,5 @@ public class PlayerData {
     public void setMaxRound(int rounds){this.maxRound = rounds;}
     public int getMaxRound() {return this.maxRound;}
     public int getQuestionsSize() {return questions.size();}
+    public int getPlayerSize() {return players.size();}
 }
