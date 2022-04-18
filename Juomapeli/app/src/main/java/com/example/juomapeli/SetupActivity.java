@@ -2,26 +2,47 @@ package com.example.juomapeli;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+
 import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.lang.reflect.Type;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
+
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
+import org.json.JSONObject;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONStringer;
+import org.json.JSONTokener;
+
+
 
 public class SetupActivity extends AppCompatActivity {
 
     public static ArrayList<String> playerNames = new ArrayList<String>();
     public ArrayList<TextView> textViews = new ArrayList<TextView>();
+    public ArrayList<Question> questionList = new ArrayList<Question>();
     EditText inputfield;
     Button deleteButton, buttonStart;
     PlayerData playerData;
     int maxRounds = 30;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,7 +81,7 @@ public class SetupActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 playerData.setMaxRound(maxRounds);
-                playerData.setQuestions(Arrays.asList(getResources().getStringArray(R.array.player_questions)));
+                playerData.setQuestions(questionList);
                 playerData.setPlayers(playerNames);
                 startActivity(new Intent(SetupActivity.this, GameplayActivity.class));
                 finish();
@@ -68,8 +89,46 @@ public class SetupActivity extends AppCompatActivity {
         });
 
         playerData = com.example.juomapeli.PlayerData.getInstance();
+        generateQuestions();
+
+    }
+
+    private void generateQuestions() {
+        try {
+            Log.d("loggaus", "aloitettu");
+            JSONObject obj = new JSONObject(loadJSONFromAsset(getApplicationContext()));
+            Log.d("loggaus", "objekti luotu");
+            JSONArray jarr = obj.getJSONArray("questions");
+            Log.d("loggaus", "json: " + obj);
+            for (int i = 0; i < jarr.length(); i++) {
+                JSONObject sq = jarr.getJSONObject(i);
+                String title = sq.getString("title");
+                String desc = sq.getString("description");
+                boolean timedEvent = sq.getBoolean("timedEvent");
+                boolean targetPlayer = sq.getBoolean("targetPlayer");
+                questionList.add(new Question(title, desc, timedEvent, targetPlayer));
+            }
+        } catch (JSONException e){
+
+        }
+    }
 
 
+    public String loadJSONFromAsset(Context context) {
+        String json;
+        try {
+            InputStream is = context.getAssets().open("questions.json");
+            int size = is.available();
+            byte[] buffer = new byte[size];
+            is.read(buffer);
+            is.close();
+            json = new String(buffer, StandardCharsets.UTF_8);
+        } catch (IOException ex) {
+            ex.printStackTrace();
+            Log.d("loggaus", "loadfromjson failed");
+            return null;
+        }
+        return json;
     }
         public void getName(String name) {
             if (playerNames.size() < 10) {

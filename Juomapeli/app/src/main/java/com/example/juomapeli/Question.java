@@ -15,4 +15,5 @@ public class Question {
     public String getTitle() {return this.title;}
     public String getDescription() {return this.description;}
     public boolean getTimedEvent() {return this.timedEvent;}
+    public boolean getTargetPlayer() {return this.targerPlayer;}
 }

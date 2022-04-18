@@ -1,0 +1,170 @@
+{
+    "questions": [
+        {
+            "title": "Juo",
+            "description": "Tarvitseeko tätä selittää?",
+            "timedEvent": "false",
+            "targetPlayer": "false"
+        },
+        {
+            "title": "Jaa huikkia",
+            "description": "Jaa kolme huikkaa muille pelaajille mielesin mukaan",
+            "timedEvent": "false",
+            "targetPlayer": "false" 
+        },
+        {
+            "title": "Vesiputous",
+            "description": "Jokainen pelaaja aloittaa juomisen. Kortin saaneen vasemmalla puolella oleva pelaaja saa lopettaa juomisen ensin ja sen jälkeen hänen vasemmalla puolellaan oleva jne.",
+            "timedEvent": "false",
+            "targetPlayer": "false" 
+        },
+        {
+            "title": "Sääntö",
+            "description": "Saat saa päättää uuden säännön. Säännöt pysyvät pelin loppuun tai jos joku käyttää uuden säännön aikaisemman säännön kumoamiseen.",
+            "timedEvent": "false",
+            "targetPlayer": "false" 
+        },
+        {
+            "title": "Huora",
+            "description": "Saat valita itsellesi huoran. Aina kun kortin nostajalle määräytyy huikkia, huora joutuu juomaan saman määrän.",
+            "timedEvent": "false",
+            "targetPlayer": "false" 
+        },
+        {
+            "title": "Tarina",
+            "description": "Aloita tarina valitsemallasi sanalla ja seuraavan tulee toistaa sana ja lisätä uusi sana. Jokaisen pelaajan on toistettava kaikki edelliset sanat.",
+            "timedEvent": "false",
+            "targetPlayer": "false" 
+        }, {
+            "title": "Kategoria",
+            "description": "Valitse haluamasi kategoria ja sano ensimmäinen kategoriaan kuuluva asia, esim. automerkit, viikonpäivät tai planeetat. Asioita luetellaan vuorotellen kunnes joku ei keksi tai sanoo jo sanotun asian.",
+            "timedEvent": "false",
+            "targetPlayer": "false" 
+        }, {
+            "title": "123",
+            "description": "Juo yksi huikka. Seuraava juo kaksi huikkaa, sitä seuraava kolme jne.",
+            "timedEvent": "false",
+            "targetPlayer": "false" 
+        }, {
+            "title": "Totuus vai tehtävä",
+            "description": "Kysy uhrilta 'totuus vai tehtävä?' ja toimi sen mukaan. uhri: ",
+            "timedEvent": "false",
+            "targetPlayer": "true" 
+        }, {
+            "title": "Vanhin juo",
+            "description": "Vanhin pelaaja juo",
+            "timedEvent": "false",
+            "targetPlayer": "false" 
+        }, {
+            "title": "Nuorin juo",
+            "description": "Nuorin pelaaja juo",
+            "timedEvent": "false",
+            "targetPlayer": "false" 
+        }, {
+            "title": "Pisin juo",
+            "description": "Pisin pelaaja juo",
+            "timedEvent": "false",
+            "targetPlayer": "false" 
+        }, {
+            "title": "Lyhyin juo",
+            "description": "Lyhyin pelaaja juo",
+            "timedEvent": "false",
+            "targetPlayer": "false" 
+        }, {
+            "title": "Vahvinta juomaa juova juo",
+            "description": "Vahvinta juomaa lipittävä pelaaja pääsee katumaan valintaansa. Tasapelissä molemmat/kaikki juovat.",
+            "timedEvent": "false",
+            "targetPlayer": "false" 
+        }, {
+            "title": "Laimeinta juomaa juova juo",
+            "description": "Juo nössö. Tasapelissä molemmta/kaikki juovat.",
+            "timedEvent": "false",
+            "targetPlayer": "false" 
+        }, {
+            "title": "Luettele sukunimet",
+            "description": "Luettele jokaisen pelaajan sukunimi. Jos saat kaikki oikein muut juovat, muuten sinä juot.",
+            "timedEvent": "false",
+            "targetPlayer": "false" 
+        }, {
+            "title": "Tee kuperkeikka ja juo",
+            "description": "Tee kuperkeikka ja juo. Tehtävästä kieltäytymisestä juot enemmän.",
+            "timedEvent": "false",
+            "targetPlayer": "false" 
+        }, {
+            "title": "En ole koskaan...",
+            "description": "Sano asia mitä et ole koskaan tehnyt. Kaikki asian tehneet juovat.",
+            "timedEvent": "false",
+            "targetPlayer": "false" 
+        }, {
+            "title": "Kaikki juovat",
+            "description": "Sitähän tänne tultiin tekemään.",
+            "timedEvent": "false",
+            "targetPlayer": "false" 
+        }, {
+            "title": "Puhu laulamalla",
+            "description": "Kaiken puheesi tulee tapahtua laulamalla kierroksen ajan. Muut pelaajat päättävät onnistumisesta.",
+            "timedEvent": "true",
+            "targetPlayer": "false" 
+        }, {
+            "title": "Puhu riimitellen",
+            "description": "kaikkien puhumiesi lauseiden tulee rimmata kierroksen ajan, esim. 'Onko se mun vuoro? Kysyy juoppo kuoro'. Muut pelaajat päättävät onnistumisesta.",
+            "timedEvent": "true",
+            "targetPlayer": "false" 
+        }, {
+            "title": "Juo koskettamatta huuliasi",
+            "description": "Juo pullosta/tölkistä/yms ilman että se koskettaa huuliasi.",
+            "timedEvent": "false",
+            "targetPlayer": "false" 
+        }, {
+            "title": "Viimeisin viesti",
+            "description": "Lue viimeisin saamasi viesti ääneen.",
+            "timedEvent": "false",
+            "targetPlayer": "false" 
+        }, {
+            "title": "Ota selfie",
+            "description": "Ota selfie toisen pelaajan kanssa. Tärkeät hetket on ikuistettava! Selfiekaveri: ",
+            "timedEvent": "false",
+            "targetPlayer": "true" 
+        }, {
+            "title": "Ota kuva jaloistasi",
+            "description": "Ota kuva ja lähetä se vanhemmillesi tai puolisolle. Pelissä mukana olevia ei hyväksytä",
+            "timedEvent": "false",
+            "targetPlayer": "false"
+        }, {
+            "title": "Lempiruoka",
+            "description": "Kerro/arvaa toisen pelaajan lempiruoka. Oikena arvaamalla toinen juo, väärin arvaamalla sinä juot. Kolme arvausta. Arvailunkohde: ",
+            "timedEvent": "false",
+            "targetPlayer": "true"
+        }, {
+            "title": "Salatehtävä",
+            "description": " Keksi jokin ele/liike kertomatta sitä muille. Tee elettä satunnaisesti ja muut yrittävät keksiä mitä elettä teet. Kun muut keksivät oikean toiminnan, heidän tulee alkaa tehdä elettä myös. Viimeinen toiminnan keksinyt pelaaja juo. Voi alkaa muiden korttien aikana.",
+            "timedEvent": "false",
+            "targetPlayer": "false"
+        }, {
+            "title": "Sympatiaa",
+            "description": "Juo kolme, muut juovat yhden.",
+            "timedEvent": "false",
+            "targetPlayer": "false"
+        }, {
+            "title": "KPS-PVE",
+            "description": "Pelaa Kivi-paperi-sakset kaikkia muita vastaan vuorotellen. Juo jokaisesta hävitystä pelistä.",
+            "timedEvent": "false",
+            "targetPlayer": "false"
+        }, {
+            "title": "KPS-PVP",
+            "description": "Pelaa kivi-paperi-sakset yhtä pelaajaa vastaan. Häiväjä juo. Vastustaja: ",
+            "timedEvent": "false",
+            "targetPlayer": "true"
+        }, {
+            "title": "'Snap'",
+            "description": "Kaikkien juomien nykyisestä määrästä on hävittävä puolet.",
+            "timedEvent": "false",
+            "targetPlayer": "false"
+        }, {
+            "title": "Smurffaa mua",
+            "description": " Kaikki korvaavat satunnaisia sanoja puheessaan 'smurffi'-puheella yhden kierroksen ajan.",
+            "timedEvent": "true",
+            "targetPlayer": "false"
+        }
+    ]
+}

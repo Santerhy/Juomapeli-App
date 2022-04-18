@@ -14,7 +14,8 @@ import java.util.List;
 public class PlayerData {
     private static PlayerData INSTANCE = null;
     private PlayerData(){}
-    ArrayList<String> players, questions;
+    ArrayList<String> players;
+    ArrayList<Question> questions;
     ArrayList<Integer> usedIndexes = new ArrayList<Integer>();
     int maxRound;
     public static synchronized PlayerData getInstance() {
@@ -25,18 +26,18 @@ public class PlayerData {
     }
 
 
-    public void setQuestions(List<String> _questions) {
+    public void setQuestions(List<Question> _questions) {
         Log.d("loggaus", "aloitettu");
-        questions = new ArrayList<String>(_questions);
+        questions = new ArrayList<>(_questions);
         Log.d("loggaus", "lista luotu");
         Collections.shuffle(questions); //(questions, new Random(players.size())
         Log.d("loggaus", "lista sekoitettu");
-        while (maxRound < questions.size())
-            questions.remove(questions.size() - 1);
-        Log.d("loggaus", questions.get(0));
+        //while (maxRound < questions.size())
+          //  questions.remove(questions.size() - 1);
+        Log.d("loggaus", "koko " + questions.size());
     }
 
-    public String getQuestion(int index) {
+    public Question getQuestion(int index) {
         return questions.get(index);
     }
 
@@ -53,4 +54,5 @@ public class PlayerData {
 
     public void setMaxRound(int rounds){this.maxRound = rounds;}
     public int getMaxRound() {return this.maxRound;}
+    public int getQuestionsSize() {return questions.size();}
 }
