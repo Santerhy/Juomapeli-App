@@ -23,4 +23,5 @@
     <string name="inputtext_default">Kirjoita nimi</string>
     <string name="buttonDeleteLatest">Poista viimeisin nimi</string>
     <string name="buttonStart">Aloita ryyppääminen</string>
+    <string name="button_gameplay_next">Seuraava kortti</string>
 </resources>

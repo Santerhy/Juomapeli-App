@@ -111,7 +111,9 @@ public class GameplayActivity extends AppCompatActivity {
                 fullRound.setText(fullRoundString);
                 fullRoundQuestions.poll();
                 Log.d("loggaus", fullRoundString);
-            }
+                break;
+            } else
+                fullRound.setText("");
         }
         if (currentQuestion.getTimedEvent()) {
             fullRoundQuestions.add(new FullRoundQuestion(playerIndex, playerData.getPlayerWithIndex(playerIndex), currentQuestion.getTitle()));

@@ -72,6 +72,7 @@ public class SetupActivity extends AppCompatActivity {
                         (keyCode == KeyEvent.KEYCODE_ENTER)) {
                     // Perform action on key press
                     getName(inputfield.getText().toString());
+                    inputfield.getText().clear();
                     return true;
                 }
                 return false;
@@ -125,7 +126,6 @@ public class SetupActivity extends AppCompatActivity {
             json = new String(buffer, StandardCharsets.UTF_8);
         } catch (IOException ex) {
             ex.printStackTrace();
-            Log.d("loggaus", "loadfromjson failed");
             return null;
         }
         return json;
