@@ -65,7 +65,7 @@ public class GameplayActivity extends AppCompatActivity {
             currentQuestionDesc += playerData.getPlayerWithIndex(getTargetPlayer());
         }
         questionText.setText(currentQuestionDesc);
-
+        fullRound.setText("");
         checkFullRoundQuestions();
     }
 
@@ -93,6 +93,7 @@ public class GameplayActivity extends AppCompatActivity {
         questionText.setText(currentQuestionDesc);
         questionTitle.setText(playerData.getQuestion(currentRound).getTitle());
         roundText.setText(currentRound + 1 + "/" + maxRounds);
+        fullRound.setText("");
         checkFullRoundQuestions();
     }
 
