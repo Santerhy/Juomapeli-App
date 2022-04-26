@@ -33,7 +33,8 @@
             android:layout_height="38dp"
             android:text="Pelaajan matti vuoro"
             android:textAlignment="center"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:typeface="serif" />
 
     </androidx.cardview.widget.CardView>
 
@@ -62,7 +63,8 @@
             android:layout_margin="10dp"
             android:text="Testi"
             android:textAlignment="center"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:typeface="serif" />
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView

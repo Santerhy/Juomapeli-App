@@ -4,51 +4,44 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gameplay_background"
     tools:context=".SetupActivity">
 
-    <Button
-        android:id="@+id/buttonStart"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/buttonStart"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="409dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="36dp"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.858"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.843" />
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout">
 
-    <Button
-        android:id="@+id/buttonDeleteLatest"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="deleteLatest"
-        android:text="@string/buttonDeleteLatest"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.088"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.942" />
+        <EditText
+            android:id="@+id/editTextTextPersonName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/inputtext_default"
+            android:inputType="textPersonName"
+            android:minHeight="48dp" />
 
-    <EditText
-        android:id="@+id/editTextTextPersonName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="@string/inputtext_default"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.744" />
+        <Button
+            android:id="@+id/buttonDeleteLatest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="deleteLatest"
+            android:text="@string/buttonDeleteLatest"
+            android:textSize="12sp"
+            app:backgroundTint="@color/design_default_color_error" />
+
+    </LinearLayout>
 
     <TableLayout
+        android:id="@+id/tableLayout"
         android:layout_width="314dp"
         android:layout_height="406dp"
+        android:background="@drawable/image_border"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.466"
@@ -64,13 +57,17 @@
                 android:id="@+id/nameText0"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:textSize="24sp" />
 
             <TextView
                 android:id="@+id/nameText5"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:textSize="24sp" />
         </TableRow>
 
         <TableRow
@@ -80,14 +77,18 @@
             <TextView
                 android:id="@+id/nameText1"
                 android:layout_width="0dp"
+                android:layout_margin="5dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:textSize="24sp" />
 
             <TextView
                 android:id="@+id/nameText6"
                 android:layout_width="0dp"
+                android:layout_margin="5dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:textSize="24sp" />
         </TableRow>
 
         <TableRow
@@ -98,13 +99,17 @@
                 android:id="@+id/nameText2"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:textSize="24sp" />
 
             <TextView
                 android:id="@+id/nameText7"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:textSize="24sp" />
         </TableRow>
 
         <TableRow
@@ -115,13 +120,17 @@
                 android:id="@+id/nameText3"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:textSize="24sp" />
 
             <TextView
                 android:id="@+id/nameText8"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:textSize="24sp" />
         </TableRow>
 
         <TableRow
@@ -132,13 +141,17 @@
                 android:id="@+id/nameText4"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:textSize="24sp" />
 
             <TextView
                 android:id="@+id/nameText9"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:textSize="24sp" />
         </TableRow>
 
 
@@ -149,10 +162,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/setup_title"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.068" />
+
+    <Button
+        android:id="@+id/buttonStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/buttonStart"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 </androidx.constraintlayout.widget.ConstraintLayout>
