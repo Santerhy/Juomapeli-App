@@ -2,6 +2,7 @@
     <string name="app_name">Juomapeli</string>
     <string name="action_settings">Settings</string>
     <!-- Strings used for fragments for navigation -->
+    <string name="version_text">Version 1.0</string>
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
@@ -24,4 +25,7 @@
     <string name="buttonDeleteLatest">Poista viimeisin nimi</string>
     <string name="buttonStart">Aloita ryyppääminen</string>
     <string name="button_gameplay_next">Seuraava kortti</string>
+    <string name="credits_text">Santeri Hytönen 2022</string>
+    <string name="error_text1">Lisää vähintään yksi pelaaja</string>
+    <string name="error_text2">Max pelaaja määrä</string>
 </resources>

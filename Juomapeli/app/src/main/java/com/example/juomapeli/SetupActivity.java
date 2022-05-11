@@ -10,6 +10,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -38,6 +40,7 @@ public class SetupActivity extends AppCompatActivity {
     public static ArrayList<String> playerNames = new ArrayList<String>();
     public ArrayList<TextView> textViews = new ArrayList<TextView>();
     public ArrayList<Question> questionList = new ArrayList<Question>();
+    TextView errorText;
     EditText inputfield;
     Button deleteButton, buttonStart;
     PlayerData playerData;
@@ -61,33 +64,46 @@ public class SetupActivity extends AppCompatActivity {
         textViews.add((TextView) findViewById(R.id.nameText9));
 
 
+
+        errorText = (TextView) findViewById(R.id.textViewError);
         inputfield = (EditText) findViewById(R.id.editTextTextPersonName);
         deleteButton = (Button) findViewById(R.id.buttonDeleteLatest);
         buttonStart = (Button) findViewById(R.id.buttonStart);
 
+        errorText.setVisibility(View.INVISIBLE);
+
         inputfield.setOnKeyListener(new View.OnKeyListener() {
             public boolean onKey(View v, int keyCode, KeyEvent event) {
-                // If the event is a key-down event on the "enter" button
-                if ((event.getAction() == KeyEvent.ACTION_DOWN) &&
-                        (keyCode == KeyEvent.KEYCODE_ENTER)) {
-                    // Perform action on key press
-                    getName(inputfield.getText().toString());
-                    inputfield.getText().clear();
-                    return true;
+                if ((event.getAction() == KeyEvent.ACTION_DOWN) && (keyCode == KeyEvent.KEYCODE_ENTER)) {
+                    if (playerNames.size() == 10) {
+                        errorText.setVisibility(View.VISIBLE);
+                        errorText.setText(getString(R.string.error_text2));
+                    }
+                    else {
+                        getName(inputfield.getText().toString());
+                        inputfield.getText().clear();
+                        errorText.setVisibility(View.INVISIBLE);
+                        //return true;
+                    }
                 }
-                return false;
+                return true;
             }
         });
-        buttonStart.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                playerData.setMaxRound(maxRounds);
-                playerData.setQuestions(questionList);
-                playerData.setPlayers(playerNames);
-                startActivity(new Intent(SetupActivity.this, GameplayActivity.class));
-                finish();
-            }
-        });
+
+                buttonStart.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        if (!playerNames.isEmpty()) {
+                            playerData.setMaxRound(maxRounds);
+                            playerData.setQuestions(questionList);
+                            playerData.setPlayers(playerNames);
+                            startActivity(new Intent(SetupActivity.this, GameplayActivity.class));
+                            finish();
+                        } else
+                            errorText.setVisibility(View.VISIBLE);
+                        errorText.setText(getString(R.string.error_text1));
+                    }
+                });
 
         playerData = com.example.juomapeli.PlayerData.getInstance();
         generateQuestions();
@@ -149,9 +165,11 @@ public class SetupActivity extends AppCompatActivity {
         public void deleteLatest(View view) {
         if (playerNames.size() > 0) {
             playerNames.remove(playerNames.size() - 1);
+            errorText.setVisibility(View.INVISIBLE);
             updateNameviews();
         }
         }
+
 
 
 }
