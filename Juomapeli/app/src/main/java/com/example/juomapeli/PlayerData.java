@@ -55,4 +55,12 @@ public class PlayerData {
     public int getMaxRound() {return this.maxRound;}
     public int getQuestionsSize() {return questions.size();}
     public int getPlayerSize() {return players.size();}
+
+    public void clearData() {
+        if (players != null)
+            players.clear();
+        if (questions != null)
+            questions.clear();
+        maxRound = 0;
+    }
 }

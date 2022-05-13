@@ -25,6 +25,8 @@
     <string name="buttonDeleteLatest">Poista viimeisin nimi</string>
     <string name="buttonStart">Aloita ryyppääminen</string>
     <string name="button_gameplay_next">Seuraava kortti</string>
+    <string name="ending_text">Peli loppui</string>
+    <string name="ending_button">Alkuun</string>
     <string name="credits_text">Santeri Hytönen 2022</string>
     <string name="error_text1">Lisää vähintään yksi pelaaja</string>
     <string name="error_text2">Max pelaaja määrä</string>

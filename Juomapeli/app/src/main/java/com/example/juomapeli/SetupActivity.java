@@ -97,6 +97,7 @@ public class SetupActivity extends AppCompatActivity {
                             playerData.setMaxRound(maxRounds);
                             playerData.setQuestions(questionList);
                             playerData.setPlayers(playerNames);
+                            clearActivityData();
                             startActivity(new Intent(SetupActivity.this, GameplayActivity.class));
                             finish();
                         } else
@@ -106,6 +107,7 @@ public class SetupActivity extends AppCompatActivity {
                 });
 
         playerData = com.example.juomapeli.PlayerData.getInstance();
+        playerData.clearData();
         generateQuestions();
 
     }
@@ -170,6 +172,27 @@ public class SetupActivity extends AppCompatActivity {
         }
         }
 
+        private void clearActivityData() {
+            playerNames.clear();
+            questionList.clear();
+        }
+
+        /*
+        @Override
+        public void onSaveInstanceState(Bundle savedInstance) {
+        super.onSaveInstanceState(savedInstance);
+        savedInstance.putStringArrayList("players", playerNames);
+        }
+
+        @Override
+        public void onRestoreInstanceState(Bundle savedInstance) {
+        super.onRestoreInstanceState(savedInstance);
+        playerNames.add("Masa");
+        updateNameviews();
+        }
+
+
+         */
 
 
 }

@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -70,9 +71,12 @@ public class GameplayActivity extends AppCompatActivity {
     }
 
     public void updateRound(View view) {
-        if (currentRound + 1 >= maxRounds) {
-            //end game
-        } else {
+        if (currentRound + 1 == maxRounds) {
+            endingText();
+            currentRound++;
+        } else if (currentRound + 1 > maxRounds)
+            backToMenu();
+        else {
             currentRound++;
             if (playerIndex == playerSize -1)
                 playerIndex = 0;
@@ -82,6 +86,18 @@ public class GameplayActivity extends AppCompatActivity {
             currentQuestion = playerData.getQuestion(currentRound);
             updateTextViews();
         }
+    }
+
+    private void endingText() {
+        nextCard.setText(getString(R.string.ending_button));
+        questionTitle.setText(getString(R.string.ending_text));
+        playerText.setText("");
+        questionText.setText("");
+    }
+
+    private void backToMenu() {
+        startActivity(new Intent(GameplayActivity.this, MainActivity.class));
+        finish();
     }
 
     private void updateTextViews() {
@@ -119,5 +135,20 @@ public class GameplayActivity extends AppCompatActivity {
         if (currentQuestion.getTimedEvent()) {
             fullRoundQuestions.add(new FullRoundQuestion(playerIndex, playerData.getPlayerWithIndex(playerIndex), currentQuestion.getTitle()));
         }
+    }
+
+    @Override
+    public void onSaveInstanceState(@NonNull Bundle savedInstance) {
+        super.onSaveInstanceState(savedInstance);
+        savedInstance.putInt("currentRound", currentRound);
+        savedInstance.putInt("playerIndex", playerIndex);
+
+    }
+
+    @Override
+    public void onRestoreInstanceState(Bundle savedInstance) {
+        super.onRestoreInstanceState(savedInstance);
+        currentRound = savedInstance.getInt("currentRound");
+        playerIndex = savedInstance.getInt("playerIndex");
     }
 }
