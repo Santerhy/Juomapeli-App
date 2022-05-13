@@ -8,7 +8,7 @@
         },
         {
             "title": "Jaa huikkia",
-            "description": "Jaa kolme huikkaa muille pelaajille mielesin mukaan",
+            "description": "Jaa kolme huikkaa muille pelaajille mielesi mukaan",
             "timedEvent": "false",
             "targetPlayer": "false" 
         },
@@ -20,7 +20,7 @@
         },
         {
             "title": "Sääntö",
-            "description": "Saat saa päättää uuden säännön. Säännöt pysyvät pelin loppuun tai jos joku käyttää uuden säännön aikaisemman säännön kumoamiseen.",
+            "description": "Saat päättää uuden säännön. Säännöt pysyvät pelin loppuun tai jos joku käyttää uuden säännön aikaisemman säännön kumoamiseen.",
             "timedEvent": "false",
             "targetPlayer": "false" 
         },
@@ -132,7 +132,7 @@
             "targetPlayer": "false"
         }, {
             "title": "Lempiruoka",
-            "description": "Kerro/arvaa toisen pelaajan lempiruoka. Oikena arvaamalla toinen juo, väärin arvaamalla sinä juot. Kolme arvausta. Arvailunkohde: ",
+            "description": "Kerro/arvaa toisen pelaajan lempiruoka. Oikein arvaamalla toinen juo, väärin arvaamalla sinä juot. Kolme arvausta. Arvailunkohde: ",
             "timedEvent": "false",
             "targetPlayer": "true"
         }, {
@@ -152,7 +152,7 @@
             "targetPlayer": "false"
         }, {
             "title": "KPS-PVP",
-            "description": "Pelaa kivi-paperi-sakset yhtä pelaajaa vastaan. Häiväjä juo. Vastustaja: ",
+            "description": "Pelaa kivi-paperi-sakset yhtä pelaajaa vastaan. Häviäjä juo. Vastustaja: ",
             "timedEvent": "false",
             "targetPlayer": "true"
         }, {

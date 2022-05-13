@@ -3,6 +3,14 @@ plugins {
 }
 
 android {
+    signingConfigs {
+        debug {
+            storeFile file('C:\\Users\\Admin\\Documents\\Android key\\app_key.jks')
+            storePassword 'OlispaKaljaa29'
+            keyAlias 'key0'
+            keyPassword 'OlispaKaljaa29'
+        }
+    }
     compileSdk 32
 
     defaultConfig {
