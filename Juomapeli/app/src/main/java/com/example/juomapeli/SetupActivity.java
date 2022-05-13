@@ -72,6 +72,7 @@ public class SetupActivity extends AppCompatActivity {
 
         errorText.setVisibility(View.INVISIBLE);
 
+        //Listener for inputField when adding new names
         inputfield.setOnKeyListener(new View.OnKeyListener() {
             public boolean onKey(View v, int keyCode, KeyEvent event) {
                 if ((event.getAction() == KeyEvent.ACTION_DOWN) && (keyCode == KeyEvent.KEYCODE_ENTER)) {
@@ -97,6 +98,7 @@ public class SetupActivity extends AppCompatActivity {
                             playerData.setMaxRound(maxRounds);
                             playerData.setQuestions(questionList);
                             playerData.setPlayers(playerNames);
+                            Log.d("loggaus", "kysymyksiä " + questionList.size());
                             clearActivityData();
                             startActivity(new Intent(SetupActivity.this, GameplayActivity.class));
                             finish();
@@ -105,20 +107,18 @@ public class SetupActivity extends AppCompatActivity {
                         errorText.setText(getString(R.string.error_text1));
                     }
                 });
-
+        //Get instance of playerData and clear all previous data
         playerData = com.example.juomapeli.PlayerData.getInstance();
         playerData.clearData();
         generateQuestions();
 
     }
 
+    //Load all questions from json-file, create objects of their data and add those objects to questionList
     private void generateQuestions() {
         try {
-            Log.d("loggaus", "aloitettu");
             JSONObject obj = new JSONObject(loadJSONFromAsset(getApplicationContext()));
-            Log.d("loggaus", "objekti luotu");
             JSONArray jarr = obj.getJSONArray("questions");
-            Log.d("loggaus", "json: " + obj);
             for (int i = 0; i < jarr.length(); i++) {
                 JSONObject sq = jarr.getJSONObject(i);
                 String title = sq.getString("title");
@@ -171,28 +171,8 @@ public class SetupActivity extends AppCompatActivity {
             updateNameviews();
         }
         }
-
         private void clearActivityData() {
             playerNames.clear();
             questionList.clear();
         }
-
-        /*
-        @Override
-        public void onSaveInstanceState(Bundle savedInstance) {
-        super.onSaveInstanceState(savedInstance);
-        savedInstance.putStringArrayList("players", playerNames);
-        }
-
-        @Override
-        public void onRestoreInstanceState(Bundle savedInstance) {
-        super.onRestoreInstanceState(savedInstance);
-        playerNames.add("Masa");
-        updateNameviews();
-        }
-
-
-         */
-
-
 }

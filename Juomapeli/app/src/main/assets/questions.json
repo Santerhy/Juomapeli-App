@@ -162,8 +162,53 @@
             "targetPlayer": "false"
         }, {
             "title": "Smurffaa mua",
-            "description": " Korvaa puheessasi sanoja 'smurffi'-puheella yhden kierroksen ajan.",
+            "description": "Korvaa puheessasi sanoja 'smurffi'-puheella yhden kierroksen ajan.",
             "timedEvent": "true",
+            "targetPlayer": "false"
+        }, {
+            "title": "Äänestys: äänekkäin",
+            "description": "Äänestäkää joukostanne äänekkäin pelaaja. Eniten ääniä saanut pelaaja juo.",
+            "timedEvent": "false",
+            "targetPlayer": "false"
+        }, {
+            "title": "Äänestys: kovin juoppo",
+            "description": "Äänestäkää joukostanne kovin juoppo. Eniten ääniä saanut pelaaja juo.",
+            "timedEvent": "false",
+            "targetPlayer": "false"
+        }, {
+            "title": "Äänestys: pihein",
+            "description": "Äänestäkää joukostanne pihein pelaaja. Eniten ääniä saanut pelaaja juo.",
+            "timedEvent": "false",
+            "targetPlayer": "false"
+        }, {
+            "title": "Vitun rotat",
+            "description": "Kaikki työttömät juovat.",
+            "timedEvent": "false",
+            "targetPlayer": "false"
+        }, {
+            "title": "Bää bää",
+            "description": "Kaikki työssäkäyvät juovat.",
+            "timedEvent": "false",
+            "targetPlayer": "false"
+        }, {
+            "title": "Nikotiini addiktit",
+            "description": "Kaikki tällä hetkellä nikotiinin vaikutuksen alaisina olevat juovat.",
+            "timedEvent": "false",
+            "targetPlayer": "false"
+        }, {
+            "title": "Juomapeli-neitsyt",
+            "description": "Kaikki, jotka pelaavat tätä peliä ensimmäistä kertaa juovat.",
+            "timedEvent": "false",
+            "targetPlayer": "false"
+        }, {
+            "title": "Veteraanit",
+            "description": "Kaikki, jotka ovat pelanneet tätä peliä ennenkin juovat.",
+            "timedEvent": "false",
+            "targetPlayer": "false"
+        }, {
+            "title": "Kannattaako tämä?",
+            "description": "Pohdi hetki elämänvalintojasi. Sitten juo.",
+            "timedEvent": "false",
             "targetPlayer": "false"
         }
     ]
