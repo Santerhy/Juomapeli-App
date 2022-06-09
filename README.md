@@ -3,6 +3,6 @@ Hanki viihdykettä illanistujaisiin tällä hauskalla ja innovatiivisella juomap
 
 **Jopa kymmenen pelaajaa**
 
-**Yli 40 uniikkia tehtävää**
+**Jopa 60 uniikkia tehtävää**
 
 ## Vaatii vähintään android version 7.0
