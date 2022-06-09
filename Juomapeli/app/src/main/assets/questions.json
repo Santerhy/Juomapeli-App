@@ -47,7 +47,7 @@
             "targetPlayer": "false" 
         }, {
             "title": "Totuus vai tehtävä",
-            "description": "Kysy uhrilta 'totuus vai tehtävä?' ja toimi sen mukaan. uhri: ",
+            "description": "Kysy uhrilta 'totuus vai tehtävä?' ja toimi sen mukaan. Uhri: ",
             "timedEvent": "false",
             "targetPlayer": "true" 
         }, {
@@ -92,7 +92,7 @@
             "targetPlayer": "false" 
         }, {
             "title": "En ole koskaan...",
-            "description": "Sano asia mitä et ole koskaan tehnyt. Kaikki asian tehneet juovat.",
+            "description": "Käykää kierros läpi niin että jokainen sanoo vuorollaan asian mitä hän ei ole koskaan tehnyt. Kaikki asian tehneet juovat.",
             "timedEvent": "false",
             "targetPlayer": "false" 
         }, {
@@ -130,11 +130,6 @@
             "description": "Ota kuva ja lähetä se vanhemmillesi tai puolisolle. Pelissä mukana olevia ei hyväksytä",
             "timedEvent": "false",
             "targetPlayer": "false"
-        }, {
-            "title": "Lempiruoka",
-            "description": "Kerro/arvaa toisen pelaajan lempiruoka. Oikein arvaamalla toinen juo, väärin arvaamalla sinä juot. Kolme arvausta. Arvailunkohde: ",
-            "timedEvent": "false",
-            "targetPlayer": "true"
         }, {
             "title": "Salatehtävä",
             "description": " Keksi jokin ele/liike kertomatta sitä muille. Tee elettä satunnaisesti ja muut yrittävät keksiä mitä elettä teet. Kun muut keksivät oikean toiminnan, heidän tulee alkaa tehdä elettä myös. Viimeinen toiminnan keksinyt pelaaja juo. Voi alkaa muiden korttien aikana.",
@@ -181,6 +176,11 @@
             "timedEvent": "false",
             "targetPlayer": "false"
         }, {
+            "title": "Äänestys: älykkäin",
+            "description": "Äänestäkää joukostanne älykkäin pelaaja. Eniten ääniä saanut pelaaja juo.",
+            "timedEvent": "false",
+            "targetPlayer": "false"
+        }, {
             "title": "Vitun rotat",
             "description": "Kaikki työttömät juovat.",
             "timedEvent": "false",
@@ -208,6 +208,106 @@
         }, {
             "title": "Kannattaako tämä?",
             "description": "Pohdi hetki elämänvalintojasi. Sitten juo.",
+            "timedEvent": "false",
+            "targetPlayer": "false"
+        }, {
+            "title": "Vitsiniekka",
+            "description": "Kerro vitsi, kaikki nauravat pelaajat juovat. Jos kukaan ei naura sinä juot.",
+            "timedEvent": "false",
+            "targetPlayer": "false"
+        }, {
+            "title": "Mr. DJ",
+            "description": "Ala hyräilemään jotakin kappaletta. Ensimmäisenä oikean kappaleen arvannut pelaaja saa päättää kuka juo.",
+            "timedEvent": "false",
+            "targetPlayer": "false"
+        }, {
+            "title": "Olen joskus...",
+            "description": "Käykää kierros läpi niin että jokainen sanoo vuorollaan asian mitä hän on tehnyt. Kaikki jotka eivät ole asiaa tehneet juovat.",
+            "timedEvent": "false",
+            "targetPlayer": "false"
+        }, {
+            "title": "Parhaiten pukeutunut",
+            "description": "Päätä kuka pelaajista on pukeutunut parhaiten. Hän päättää kuka juo.",
+            "timedEvent": "false",
+            "targetPlayer": "false"
+        }, {
+            "title": "Kusettaja",
+            "description": "Puhu yhden kierroksen ajan pelkkiä valheita. Jos jäät kiinni totuuden puhumisesta, juo.",
+            "timedEvent": "true",
+            "targetPlayer": "false"
+        }, {
+            "title": "Hylkiö",
+            "description": "Kaikkien tulee ignoorata sinut kierroksen ajan",
+            "timedEvent": "true",
+            "targetPlayer": "false"
+        }, {
+            "title": "Pervo",
+            "description": "Läpsäise toisen pelaajan persettä. Uhri: ",
+            "timedEvent": "false",
+            "targetPlayer": "true"
+        }, {
+            "title": "Ventti",
+            "description": "Alkakaa laskemaan lukuja. Jokainen pelaaja sanoo vuorollaan yhden, kaksi tai kolme seuraavaa lukua. Pelaaja jolle osuu luku 21 juo. Esim. yksi... kaksi, kolme... neljä.",
+            "timedEvent": "false",
+            "targetPlayer": "false"
+        }, {
+            "title": "Vastakkain asettelu",
+            "description": "Keksi kaksi eri vaihtoehtoa. Jokainen pelaaja valitsee kumman vaihtoehdon ottaa. Vähemmistö joutuu juomaan. Esim. Pizza vai hampurilainen.",
+            "timedEvent": "false",
+            "targetPlayer": "false"
+        }, {
+            "title": "Kippis!",
+            "description": "Kippistelkää juomianne ja juokaa",
+            "timedEvent": "false",
+            "targetPlayer": "false"
+        }, {
+            "title": "Macho",
+            "description": "Pullista hauistasi ja juo.",
+            "timedEvent": "false",
+            "targetPlayer": "false"
+        }, {
+            "title": "Maa-asukki",
+            "description": "Istu lattialla yhden kierroksen ajan.",
+            "timedEvent": "true",
+            "targetPlayer": "false"
+        }, {
+            "title": "Yleistieto",
+            "description": "Kysy uhrilta yleistietokysymys. Jos hän vastaa väärin hän juo, muuten sinä juot. Uhri: ",
+            "timedEvent": "false",
+            "targetPlayer": "true"
+        }, {
+            "title": "Vittu mitkä... silmät",
+            "description": "Päätä kenellä pelaajista on kivoimmat silmät. Hän juo",
+            "timedEvent": "false",
+            "targetPlayer": "false"
+        }, {
+            "title": "Eksä tunne mua???",
+            "description": "Kerro itsestäsi jokin väite. Muut pelaajat päättävät yksilöllisesti onko väite totta vai ei. Väärin arvanneet juovat.",
+            "timedEvent": "false",
+            "targetPlayer": "false"
+        }, {
+            "title": "Puhelin-addikti",
+            "description": "Viimeisin puhelintaan vilkaissut pelaaja juo. Sääntöjen lukijaa ei lasketa.",
+            "timedEvent": "false",
+            "targetPlayer": "false"
+        }, {
+            "title": "Karvakasa",
+            "description": "Karvaisin pelaaja juo.",
+            "timedEvent": "false",
+            "targetPlayer": "false"
+        }, {
+            "title": "Lattia on laavaa",
+            "description": "Kukaan ei saa koskettaa lattiaa yhden kierroksen ajan. Jos kosketat, juot.",
+            "timedEvent": "true",
+            "targetPlayer": "false"
+        }, {
+            "title": "Kiusaaja",
+            "description": "Hauku toista pelaajaa. Uhri: ",
+            "timedEvent": "false",
+            "targetPlayer": "true"
+        }, {
+            "title": "Suosittu",
+            "description": "Kaikkien pitää kehua sinua tai juoda.",
             "timedEvent": "false",
             "targetPlayer": "false"
         }

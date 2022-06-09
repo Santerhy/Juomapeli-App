@@ -115,6 +115,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_weight=".5"
                 android:textAlignment="center"
+                android:textColor="#7C0000"
                 android:textSize="20sp" />
 
         </LinearLayout>

@@ -5,7 +5,12 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
+import android.text.Spannable;
+import android.text.SpannableString;
+import android.text.SpannableStringBuilder;
+import android.text.style.StyleSpan;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -82,7 +87,6 @@ public class GameplayActivity extends AppCompatActivity {
                 playerIndex = 0;
             else
                 playerIndex++;
-            Log.d("loggaus", "pleaaja koko: " + playerIndex);
             currentQuestion = playerData.getQuestion(currentRound);
             updateTextViews();
         }
@@ -104,13 +108,25 @@ public class GameplayActivity extends AppCompatActivity {
         currentQuestionDesc = currentQuestion.getDescription();
         playerText.setText(playerData.getPlayerWithIndex(playerIndex));
         if (currentQuestion.targerPlayer) {
-            currentQuestionDesc += playerData.getPlayerWithIndex(getTargetPlayer());
+            setSpanString(currentQuestionDesc, playerData.getPlayerWithIndex(getTargetPlayer()), questionText);
+            //currentQuestionDesc += playerData.getPlayerWithIndex(getTargetPlayer());
+        } else {
+            questionText.setText(currentQuestionDesc);
         }
-        questionText.setText(currentQuestionDesc);
         questionTitle.setText(playerData.getQuestion(currentRound).getTitle());
         roundText.setText(currentRound + 1 + "/" + maxRounds);
         fullRound.setText("");
         checkFullRoundQuestions();
+    }
+    private void setSpanString(String desc, String name, TextView textView) {
+        SpannableStringBuilder builder=new SpannableStringBuilder();
+        SpannableString txtSpannable= new SpannableString(name);
+        StyleSpan boldSpan = new StyleSpan(Typeface.BOLD);
+        txtSpannable.setSpan(boldSpan, 0, name.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        builder.append(desc);
+        builder.append(txtSpannable);
+        //builder.append(name);
+        textView.setText(builder, TextView.BufferType.SPANNABLE);
     }
 
     private int getTargetPlayer() {
